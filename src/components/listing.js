@@ -5,14 +5,12 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 const LISTING_QUERY = graphql`
   query BlogPostListing {
     allMarkdownRemark(
-      limit: 10
-      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 100
+      sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
         node {
-          excerpt
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             slug
           }
@@ -24,9 +22,9 @@ const LISTING_QUERY = graphql`
 
 const Post = styled.article`
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
-  padding: 1rem;
+  padding: 0.33rem;
   border-radius: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.33rem;
   a {
     color: #000;
     text-decoration: none;
@@ -42,7 +40,7 @@ const Post = styled.article`
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 0.8rem;
     text-decoration: underline;
-    color: #524763;
+    color: #ffa500;
   }
 `
 
@@ -52,13 +50,8 @@ const Listing = () => (
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(({ node }) => (
         <Post key={node.frontmatter.slug}>
-          <Link to={`/posts${node.frontmatter.slug}`}>
-            <h2>{node.frontmatter.title}</h2>
-          </Link>
-          <p>{node.frontmatter.date}</p>
-          <p>{node.excerpt}</p>
           <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>
-            Read More
+            <h2>{node.frontmatter.title}</h2>
           </Link>
         </Post>
       ))
@@ -67,3 +60,11 @@ const Listing = () => (
 )
 
 export default Listing
+
+// deleted line 53, 54, 55, 56 and 57 in video 15 tutScott
+// <Link to={`/posts${node.frontmatter.slug}`}>
+// <h2>{node.frontmatter.title}</h2>
+// </Link>
+
+//          <p>{node.frontmatter.date}</p>
+// <p>{node.excerpt}</p>

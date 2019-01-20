@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import logo from '../images/gatsby-astronaut.png'
+import logo from '../images/geff-icon.jpg'
 
 const HeaderWrapper = styled.div`
-  background: #524763;
-  margin-bottom: 1.45rem;
+  background: #ffa500;
+  margin-bottom: 0.33rem;
   img {
     margin-bottom: 0;
   }
@@ -15,7 +15,7 @@ const HeaderWrapper = styled.div`
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  padding: 1rem;
+  padding: 0.33rem;
 `
 
 const Header = ({ siteTitle }) => (
@@ -31,10 +31,10 @@ const Header = ({ siteTitle }) => (
         >
           <img
             style={{
-              width: '100px',
+              width: '33px',
             }}
             src={logo}
-            alt="Level Up Tutorials Logo"
+            alt="Geff Logo"
           />
         </Link>
       </h1>

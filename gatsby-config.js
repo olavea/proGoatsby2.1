@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Geff the Giraffe`,
-    description: `Another OlaBook by Andreas Brox-Fadum.`,
-    author: `@olavea`,
+    description: `Geff and ... goes ....`,
+    author: `Andreas Brox-Fadum.`,
+    dev: `Ola Vea made another OlaBook`,
     pageNav: [{ label: 'Back', path: '/' }],
   },
   plugins: [
@@ -20,7 +21,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/geff-icon.jpg`, // This path is relative to the root of the site.
       },
     },
 
@@ -38,11 +39,15 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+
     `gatsby-transformer-remark`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-offline`,
   ],
 }
 
+// make 'posts' into 'images' Scott_7
+// or deleted 'posts'  Scott_7
 // not 'posts' but 'images' Scott_7
 
 // this (optional) plugin enables Progressive Web App + Offline functionality
