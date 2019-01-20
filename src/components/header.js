@@ -43,3 +43,6 @@ const Header = ({ siteTitle }) => (
 )
 
 export default Header
+
+//ffa500 orange
+// #ffce00 yellow

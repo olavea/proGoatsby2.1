@@ -1,21 +1,33 @@
 import React from 'react'
-import Layout from '../components/layout'
-import two from '../images/02_english.png'
+import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
 
-const About = () => (
-  <Layout>
-    <div>
-      <img
-        style={{
-          width: '1333px',
-        }}
-        src={two}
-        alt="Geff two"
-      />
+const ImageOne = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTit2Query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+        file(relativePath: { regex: "/02_english/" }) {
+          childImageSharp {
+            fluid(maxWidth: 10000) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Img fluid={data.file.childImageSharp.fluid} />
 
-      <p>bla bla</p>
-    </div>
-  </Layout>
+        <div>{children}</div>
+      </>
+    )}
+  />
 )
-
-export default About
+export default ImageOne
