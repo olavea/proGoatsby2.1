@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 const ImageOne = ({ children }) => (
   <StaticQuery
@@ -26,6 +26,8 @@ const ImageOne = ({ children }) => (
         <Img fluid={data.file.childImageSharp.fluid} />
 
         <div>{children}</div>
+        <Link to="/13_english"> 👈😼 Previous Page / </Link>
+        <Link to="/15_english"> Next Page 😺👉</Link>
       </>
     )}
   />

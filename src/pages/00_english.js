@@ -16,8 +16,6 @@ const About = () => (
       />
       <Link to="/"> Previous Page </Link>
       <Link to="/1_english"> Next Page</Link>
-
-      <Listing />
     </div>
   </Layout>
 )
