@@ -4,16 +4,10 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 
 const LISTING_QUERY = graphql`
   query BlogPostListing {
-    allMarkdownRemark(
-      limit: 100
-      sort: { order: ASC, fields: [frontmatter___title] }
-    ) {
+    allFile(limit: 100, sort: { order: ASC, fields: name }) {
       edges {
         node {
-          frontmatter {
-            title
-            slug
-          }
+          name
         }
       }
     }
@@ -47,11 +41,11 @@ const Post = styled.article`
 const Listing = () => (
   <StaticQuery
     query={LISTING_QUERY}
-    render={({ allMarkdownRemark }) =>
-      allMarkdownRemark.edges.map(({ node }) => (
-        <Post key={node.frontmatter.slug}>
-          <Link class="read-more" to={`/posts${node.frontmatter.slug}`}>
-            <h2>{node.frontmatter.title}</h2>
+    render={({ allFile }) =>
+      allFile.edges.map(({ node }) => (
+        <Post key={node.name}>
+          <Link class="read-more" to={`/${node.name}`}>
+            <h2>Page {node.name}</h2>
           </Link>
         </Post>
       ))

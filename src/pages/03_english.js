@@ -1,18 +1,18 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 
 const ImageOne = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTit4Query {
+      query SiteTit3Query {
         site {
           siteMetadata {
             title
             description
           }
         }
-        file(relativePath: { regex: "/4_english/" }) {
+        file(relativePath: { regex: "/3_english/" }) {
           childImageSharp {
             fluid(maxWidth: 10000) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -26,6 +26,8 @@ const ImageOne = ({ children }) => (
         <Img fluid={data.file.childImageSharp.fluid} />
 
         <div>{children}</div>
+        <Link to="/02_english"> Previous Page </Link>
+        <Link to="/04_english"> Next Page</Link>
       </>
     )}
   />

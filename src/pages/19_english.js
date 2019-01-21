@@ -5,14 +5,14 @@ import { StaticQuery, graphql } from 'gatsby'
 const ImageOne = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTit2Query {
+      query SiteTit19Query {
         site {
           siteMetadata {
             title
             description
           }
         }
-        file(relativePath: { regex: "/02_english/" }) {
+        file(relativePath: { regex: "/19_english/" }) {
           childImageSharp {
             fluid(maxWidth: 10000) {
               ...GatsbyImageSharpFluid_tracedSVG

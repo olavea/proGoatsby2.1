@@ -46,3 +46,7 @@ export default Header
 
 //ffa500 orange
 // #ffce00 yellow
+
+// <button>
+//           <Link to="/2">This page +1 Page -> </Link>
+//         </button>
