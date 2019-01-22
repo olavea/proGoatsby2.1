@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import zero from '../images/forside_english_01.png'
-import Listing from '../components/Listing'
+// import Listing from '../components/Listing' pluss deleted from line 20
 import { Link } from 'gatsby'
 
 const About = () => (
