@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import zero from '../images/forside_english_01.png'
-// import Listing from '../components/Listing' pluss deleted from line 20
+import Listing from '../components/Listing'
 import { Link } from 'gatsby'
 
 const About = () => (
@@ -14,9 +14,10 @@ const About = () => (
         src={zero}
         alt="Geff zero"
       />
-      <Link to="/"> Previous Page </Link>
-      <Link to="/1_english"> Next Page</Link>
+      <Link to="/"> Previous Page.../ </Link>
+      <Link to="/01_english"> / Or go to the Next Page </Link>
     </div>
+    <Listing />
   </Layout>
 )
 

@@ -26,8 +26,8 @@ const ImageOne = ({ children }) => (
         <Img fluid={data.file.childImageSharp.fluid} />
 
         <div>{children}</div>
-        <Link to="/01_english"> 👈😼 Previous Page / </Link>
-        <Link to="/03_english"> Next Page 😺👉</Link>
+        <Link to="/01_english"> Previous Page.../ </Link>
+        <Link to="/03_english"> / Or go to the Next Page </Link>
       </>
     )}
   />

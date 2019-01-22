@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Listing from '../components/listing'
-import Image from '../components/image'
+import { Link } from 'gatsby'
+
 import zero from '../images/forside_english_01.png'
 
 import SEO from '../components/seo'
@@ -17,8 +17,7 @@ const IndexPage = () => (
       src={zero}
       alt="Geff zero"
     />
-
-    <Listing />
+    <Link to="/00_english"> Go to the Next Page </Link>
   </Layout>
 )
 

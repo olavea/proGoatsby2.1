@@ -12,7 +12,7 @@ const ImageOne = ({ children }) => (
             description
           }
         }
-        file(relativePath: { regex: "/9_english/" }) {
+        file(relativePath: { regex: "/09_english/" }) {
           childImageSharp {
             fluid(maxWidth: 10000) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -26,8 +26,8 @@ const ImageOne = ({ children }) => (
         <Img fluid={data.file.childImageSharp.fluid} />
 
         <div>{children}</div>
-        <Link to="/08_english"> 👈😼 Previous Page / </Link>
-        <Link to="/10_english"> Next Page 😺👉</Link>
+        <Link to="/08_english"> Previous Page... / </Link>
+        <Link to="/10_english"> / Or go to Next Page </Link>
       </>
     )}
   />
