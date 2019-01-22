@@ -27,7 +27,7 @@ const ImageOne = ({ children }) => (
 
         <div>{children}</div>
 
-        <Link to="/18_english"> Previous Page.../ 😺👉</Link>
+        <Link to="/18_english"> Previous Page.../ </Link>
       </>
     )}
   />
