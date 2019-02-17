@@ -2,6 +2,10 @@ import React from 'react'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
+import gangster from '../images/neste_side_Kris_norsk_text.png'
+
+const nextPage = '/09_english'
+
 const ImageOne = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -23,11 +27,26 @@ const ImageOne = ({ children }) => (
     `}
     render={data => (
       <>
+        <Link
+          to={nextPage}
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          <img
+            style={{
+              width: '800px',
+              marginBottom: `0rem`,
+            }}
+            src={gangster}
+            alt="Gatsby astronaut"
+          />
+        </Link>
         <Img fluid={data.file.childImageSharp.fluid} />
 
         <div>{children}</div>
         <Link to="/07_english"> Previous Page... / </Link>
-        <Link to="/09_english"> / Or go to Next Page </Link>
       </>
     )}
   />
