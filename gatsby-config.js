@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Geff the Giraffe`,
-    description: `Geff and ... goes ....`,
-    author: `Andreas Brox-Fadum.`,
+    description: `Geff the Giraffe and Humphrey the hummingbird goes on a trip and gets a new view of their lives. A children's book with drawings of animals.`,
+    author: `Andreas Fadum Haugstad.`,
     dev: `Ola Vea made another OlaBook`,
     pageNav: [{ label: 'Back', path: '/' }],
   },

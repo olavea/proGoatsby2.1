@@ -36,7 +36,6 @@ const IndexPage = () => (
       src={zero}
       alt="Geff zero"
     />
-    <Link to="/00_english"> Go to the Next Page </Link>
   </Layout>
 )
 

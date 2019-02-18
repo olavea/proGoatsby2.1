@@ -35,7 +35,6 @@ const About = () => (
         alt="Geff zero"
       />
       <Link to="/"> Previous Page.../ </Link>
-      <Link to="/01_english"> / Or go to the Next Page </Link>
     </div>
   </Layout>
 )
